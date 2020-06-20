@@ -13,7 +13,7 @@ from tkinter.font import Font
 genius = lyricsgenius.Genius(config.genius_api)
 genius.verbose = False
 scope = 'user-read-currently-playing'
-token = util.prompt_for_user_token(config.Spotify_user, scope, client_id=config.cliend_id,
+token = util.prompt_for_user_token(config.Spotify_user, scope, client_id=config.client_id,
                                    client_secret=config.client_secret_id, redirect_uri='http://www.google.com/')
 spotify = spotipy.Spotify(auth=token)
 current_track = spotify.current_user_playing_track()
